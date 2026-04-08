@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Math — ISO 31010 Risk Analysis Through Storytelling</title>
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#08080d">
+
+    <!-- Open Graph (Facebook, LinkedIn, iMessage, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://street.riskrunners.com/">
+    <meta property="og:title" content="Street Math — ISO 31010 Risk Analysis Through Storytelling">
+    <meta property="og:description" content="Ten ISO 31010 risk assessment techniques, taught not in boardrooms — but on street corners, in dive bars, and across kitchen tables.">
+    <meta property="og:image" content="https://street.riskrunners.com/street-logo.png">
+    <meta property="og:image:width" content="1117">
+    <meta property="og:image:height" content="844">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Street Math — ISO 31010 Risk Analysis Through Storytelling">
+    <meta name="twitter:description" content="Ten ISO 31010 risk assessment techniques, taught not in boardrooms — but on street corners, in dive bars, and across kitchen tables.">
+    <meta name="twitter:image" content="https://street.riskrunners.com/street-logo.png">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@300;400;600;700;900&display=swap');
 
@@ -159,7 +182,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
             gap: 24px;
         }
 
@@ -258,9 +281,61 @@
             margin-bottom: 8px;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 8px 16px;
+            border: 1px solid #1a1a2e;
+            border-radius: 8px;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #dc3250;
+            border-color: rgba(220,50,80,0.4);
+            background: rgba(220,50,80,0.05);
+        }
+
+        .footer-links svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* ── Site Logo ── */
+        .hero-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 24px;
+            border-radius: 16px;
+        }
+
         @media (max-width: 600px) {
             .grid { grid-template-columns: 1fr; }
-            .hero { min-height: 70vh; }
+            .hero { min-height: 70vh; padding: 40px 16px; }
+            .hero-logo { width: 90px; border-radius: 12px; }
+            .hero-sub { font-size: 1.05em; }
+            .intro { padding: 50px 16px; }
+            .intro h2 { font-size: 1.4em; }
+            .intro p { font-size: 0.95em; }
+            .grid-section { padding: 30px 16px 60px; }
+            .card-body { padding: 20px 18px; }
+            .card-title { font-size: 1.15em; }
+            .card-scenario { font-size: 0.85em; }
+            footer { padding: 40px 16px; }
         }
     </style>
 </head>
@@ -268,6 +343,7 @@
 
 <section class="hero">
     <div class="hero-content">
+        <img src="street-logo.png" alt="Street Math logo" class="hero-logo">
         <div class="hero-tag">Risk Runners Presents</div>
         <h1>Street Math</h1>
         <p class="hero-sub">Ten ISO 31010 risk assessment techniques, taught not in boardrooms — but on street corners, in dive bars, and across kitchen tables.</p>
@@ -437,6 +513,16 @@
     <div class="brand">STREET MATH</div>
     <p>ISO 31010 Risk Assessment Techniques — Through Storytelling</p>
     <p style="margin-top: 8px;">A Risk Runners Project</p>
+    <div class="footer-links">
+        <a href="https://github.com/jeffy893/riskrunners" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            Risk Runners Codebase
+        </a>
+        <a href="https://www.linkedin.com/in/jefferson-richards/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 0H2.4C1.07 0 0 1.07 0 2.4v11.2C0 14.93 1.07 16 2.4 16h11.2c1.33 0 2.4-1.07 2.4-2.4V2.4C16 1.07 14.93 0 13.6 0zM4.75 13.6H2.4V6h2.35v7.6zM3.58 5.03a1.36 1.36 0 110-2.72 1.36 1.36 0 010 2.72zM13.6 13.6h-2.35V9.92c0-.88-.02-2.01-1.23-2.01-1.23 0-1.42.96-1.42 1.95v3.74H6.25V6h2.26v1.04h.03c.31-.6 1.08-1.23 2.22-1.23 2.38 0 2.82 1.56 2.82 3.6v4.19z"/></svg>
+            Connect with the Founder
+        </a>
+    </div>
 </footer>
 
 </body>
