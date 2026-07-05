@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Math — ISO 31010 Risk Analysis Through Storytelling</title>
+    <title>Street Math — Risk Analysis &amp; Estimation Through Storytelling</title>
 
     <!-- Favicon & App Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -15,16 +15,16 @@
     <!-- Open Graph (Facebook, LinkedIn, iMessage, etc.) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://street.riskrunners.com/">
-    <meta property="og:title" content="Street Math — ISO 31010 Risk Analysis Through Storytelling">
-    <meta property="og:description" content="Ten ISO 31010 risk assessment techniques, taught not in boardrooms — but on street corners, in dive bars, and across kitchen tables.">
+    <meta property="og:title" content="Street Math — Risk Analysis &amp; Estimation Through Storytelling">
+    <meta property="og:description" content="ISO 31010 risk assessment and street-fighting estimation techniques — taught not in boardrooms but on street corners, in dive bars, and across kitchen tables.">
     <meta property="og:image" content="https://street.riskrunners.com/street-logo.png">
     <meta property="og:image:width" content="1117">
     <meta property="og:image:height" content="844">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Street Math — ISO 31010 Risk Analysis Through Storytelling">
-    <meta name="twitter:description" content="Ten ISO 31010 risk assessment techniques, taught not in boardrooms — but on street corners, in dive bars, and across kitchen tables.">
+    <meta name="twitter:title" content="Street Math — Risk Analysis &amp; Estimation Through Storytelling">
+    <meta name="twitter:description" content="ISO 31010 risk assessment and street-fighting estimation techniques — taught not in boardrooms but on street corners, in dive bars, and across kitchen tables.">
     <meta name="twitter:image" content="https://street.riskrunners.com/street-logo.png">
 
     <style>
@@ -336,7 +336,86 @@
             .card-title { font-size: 1.15em; }
             .card-scenario { font-size: 0.85em; }
             footer { padding: 40px 16px; }
+            .section-nav { flex-direction: column; gap: 8px; }
+            .section-nav a { font-size: 0.8em; }
         }
+
+        /* ── Section Navigation ── */
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 8, 13, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1a1a2e;
+            flex-wrap: wrap;
+        }
+
+        .section-nav a {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.82em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            text-decoration: none;
+            padding: 8px 18px;
+            border: 1px solid #1a1a2e;
+            border-radius: 6px;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+
+        .section-nav a:hover {
+            color: #fff;
+            border-color: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .section-nav a.nav-iso { border-color: rgba(220,50,80,0.3); color: #dc3250; }
+        .section-nav a.nav-iso:hover { background: rgba(220,50,80,0.1); border-color: rgba(220,50,80,0.5); }
+        .section-nav a.nav-sfm { border-color: rgba(230,170,50,0.3); color: #e6aa32; }
+        .section-nav a.nav-sfm:hover { background: rgba(230,170,50,0.1); border-color: rgba(230,170,50,0.5); }
+
+        /* ── Section Divider ── */
+        .section-divider {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #333, transparent);
+        }
+
+        .section-divider h2 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .section-divider p {
+            color: #888;
+            font-size: 1.05em;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .section-divider .accent-sfm { color: #e6aa32; }
     </style>
 </head>
 <body>
@@ -346,23 +425,28 @@
         <img src="street-logo.png" alt="Street Math logo" class="hero-logo">
         <div class="hero-tag">Risk Runners Presents</div>
         <h1>Street Math</h1>
-        <p class="hero-sub">Ten ISO 31010 risk assessment techniques, taught not in boardrooms — but on street corners, in dive bars, and across kitchen tables.</p>
-        <div class="hero-iso">ISO 31010 : 2019 — Risk Assessment Techniques</div>
+        <p class="hero-sub">Risk assessment and estimation techniques — taught not in boardrooms but on street corners, in dive bars, and across kitchen tables.</p>
+        <div class="hero-iso">ISO 31010 &bull; Street-Fighting Mathematics</div>
     </div>
     <div class="scroll-hint">↓ Scroll to explore ↓</div>
 </section>
 
+<nav class="section-nav">
+    <a href="#iso-screenplays" class="nav-iso">ISO 31010 Screenplays</a>
+    <a href="#sfm-screenplays" class="nav-sfm">Street-Fighting Math</a>
+</nav>
+
 <section class="intro">
-    <h2>Risk analysis doesn't need a PowerPoint.</h2>
-    <p>Every technique in <span class="accent">ISO 31010</span> — from Bow Tie Analysis to Markov Chains — was built to help people make better decisions under uncertainty. But somewhere between the standard and the spreadsheet, the intuition gets lost.</p>
-    <p><span class="accent">Street Math</span> puts it back. Each screenplay drops a real risk technique into an everyday scenario — a bouncer working the door, a mechanic sizing up a bad engine, a busker calculating which subway car to play. The math is real. The characters just speak it differently.</p>
-    <p>Ten techniques. Ten stories. Ten pages each.</p>
+    <h2>Math doesn't need a PowerPoint.</h2>
+    <p>Every technique in <span class="accent">ISO 31010</span> — from Bow Tie Analysis to Markov Chains — was built to help people make better decisions under uncertainty. And every tool in <span class="accent">Street-Fighting Mathematics</span> — from dimensional analysis to pictorial proofs — was built to cut through complex problems with educated guessing and opportunistic thinking.</p>
+    <p><span class="accent">Street Math</span> puts them both on the pavement. Each screenplay drops a real technique into an everyday scenario — a bouncer working the door, a mechanic sizing up a bad engine, a food cart vendor estimating crowd size. The math is real. The characters just speak it differently.</p>
+    <p>Two traditions. Sixteen stories. All street-level.</p>
 </section>
 
-<section class="grid-section">
+<section class="grid-section" id="iso-screenplays">
     <div class="grid-header">
-        <h2>The Screenplays</h2>
-        <p>Click any card to read the full 10-page screenplay.</p>
+        <h2>ISO 31010 Screenplays</h2>
+        <p>Ten risk assessment techniques through storytelling. Click any card to read the full 10-page screenplay.</p>
     </div>
     <div class="grid">
 
@@ -509,9 +593,109 @@
     </div>
 </section>
 
+<!-- ── Street-Fighting Mathematics Section ── -->
+<section class="section-divider" id="sfm-screenplays">
+    <h2>Street-Fighting Mathematics</h2>
+    <p>Six tools from Sanjoy Mahajan's <span class="accent-sfm">Street-Fighting Mathematics</span> — dimensional analysis, easy cases, lumping, pictorial proofs, successive approximation, and analogy. The art of educated guessing, taught by characters who don't have time for exact solutions.</p>
+</section>
+
+<section class="grid-section">
+    <div class="grid-header">
+        <h2 style="color: #e6aa32;">The Estimation Toolbox</h2>
+        <p>Six problem-solving weapons disguised as screenplays. Click any card to read.</p>
+    </div>
+    <div class="grid">
+
+        <!-- SFM 1. Dimensions -->
+        <a class="card" href="screenplay_sfm_dimensions.html" style="border-color: rgba(230,170,50,0.2);">
+            <div class="card-accent" style="background: linear-gradient(90deg, #e6aa32, #c89020);"></div>
+            <div class="card-body">
+                <div class="card-iso" style="color: #e6aa32;">Ch. 1 — Dimensional Analysis</div>
+                <div class="card-title">The Vendor's Conversion</div>
+                <div class="card-scenario">A street food vendor debunks a city council comparison between his annual revenue and a corporation's net worth — proving the argument is nonsense because it compares a flow to a stock. Then he estimates the fall damage on a dropped crate using nothing but units.</div>
+                <div class="card-footer">
+                    <span class="card-pages">10 PAGES</span>
+                    <span class="card-cta" style="color: #e6aa32;">Read →</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- SFM 2. Easy Cases -->
+        <a class="card" href="screenplay_sfm_easy_cases.html" style="border-color: rgba(100,200,150,0.2);">
+            <div class="card-accent" style="background: linear-gradient(90deg, #64c896, #48a878);"></div>
+            <div class="card-body">
+                <div class="card-iso" style="color: #64c896;">Ch. 2 — Easy Cases</div>
+                <div class="card-title">The Pool Shark's Limit</div>
+                <div class="card-scenario">A pool shark tests every angle formula by checking what happens at the extremes — zero, infinity, and the one case she can calculate in her head. If a formula fails the easy case, it's wrong, no matter how fancy the algebra looks.</div>
+                <div class="card-footer">
+                    <span class="card-pages">10 PAGES</span>
+                    <span class="card-cta" style="color: #64c896;">Read →</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- SFM 3. Lumping -->
+        <a class="card" href="screenplay_sfm_lumping.html" style="border-color: rgba(200,100,220,0.2);">
+            <div class="card-accent" style="background: linear-gradient(90deg, #c864dc, #a848b8);"></div>
+            <div class="card-body">
+                <div class="card-iso" style="color: #c864dc;">Ch. 3 — Lumping</div>
+                <div class="card-title">The Courier's Shortcut</div>
+                <div class="card-scenario">A bike courier estimates delivery times by lumping complex routes into simple approximations — replacing curvy integrals with rectangles, turning differential equations into algebra, and predicting a pendulum's swing without solving anything exactly.</div>
+                <div class="card-footer">
+                    <span class="card-pages">10 PAGES</span>
+                    <span class="card-cta" style="color: #c864dc;">Read →</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- SFM 4. Pictorial Proofs -->
+        <a class="card" href="screenplay_sfm_pictorial_proofs.html" style="border-color: rgba(60,180,230,0.2);">
+            <div class="card-accent" style="background: linear-gradient(90deg, #3cb4e6, #2898c8);"></div>
+            <div class="card-body">
+                <div class="card-iso" style="color: #3cb4e6;">Ch. 4 — Pictorial Proofs</div>
+                <div class="card-title">The Graffiti Artist's Geometry</div>
+                <div class="card-scenario">A graffiti artist proves mathematical truths by drawing them — stacking odd numbers into squares, splitting rectangles to show why the geometric mean never beats the arithmetic mean, and sketching logarithms as areas under curves.</div>
+                <div class="card-footer">
+                    <span class="card-pages">10 PAGES</span>
+                    <span class="card-cta" style="color: #3cb4e6;">Read →</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- SFM 5. Taking Out the Big Part -->
+        <a class="card" href="screenplay_sfm_big_part.html" style="border-color: rgba(230,80,80,0.2);">
+            <div class="card-accent" style="background: linear-gradient(90deg, #e65050, #c83838);"></div>
+            <div class="card-body">
+                <div class="card-iso" style="color: #e65050;">Ch. 5 — Taking Out the Big Part</div>
+                <div class="card-title">The Bookie's Edge</div>
+                <div class="card-scenario">A retired bookie shows how to multiply large numbers by splitting them into "one" and "few" — extracting the dominant term first, then adding fractional corrections. When the big part is handled, the rest is just noise.</div>
+                <div class="card-footer">
+                    <span class="card-pages">10 PAGES</span>
+                    <span class="card-cta" style="color: #e65050;">Read →</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- SFM 6. Analogy -->
+        <a class="card" href="screenplay_sfm_analogy.html" style="border-color: rgba(150,120,255,0.2);">
+            <div class="card-accent" style="background: linear-gradient(90deg, #9678ff, #7858e0);"></div>
+            <div class="card-body">
+                <div class="card-iso" style="color: #9678ff;">Ch. 6 — Analogy</div>
+                <div class="card-title">The Mechanic's Transfer</div>
+                <div class="card-scenario">An old mechanic solves problems he's never seen by finding ones he has — mapping electrical circuits to plumbing, 2D geometry to 3D, and discrete sums to continuous integrals. If you can solve one, you've solved the other.</div>
+                <div class="card-footer">
+                    <span class="card-pages">10 PAGES</span>
+                    <span class="card-cta" style="color: #9678ff;">Read →</span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
 <footer>
     <div class="brand">STREET MATH</div>
-    <p>ISO 31010 Risk Assessment Techniques — Through Storytelling</p>
+    <p>ISO 31010 Risk Assessment &amp; Street-Fighting Estimation — Through Storytelling</p>
     <p style="margin-top: 8px;">A Risk Runners Project</p>
     <div class="footer-links">
         <a href="https://github.com/jeffy893/riskrunners" target="_blank" rel="noopener noreferrer">
