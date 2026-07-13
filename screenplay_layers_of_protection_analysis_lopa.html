@@ -426,19 +426,30 @@
         </div>
 
         <div class="toc">
-            <h3>Scenes</h3>
-            <ol>
-                <li><a href="#page-1">PAGE 1 — INT. WAREHOUSE BACK ROOM — NIGHT</a></li>
-                <li><a href="#page-2">PAGE 2 — THE INITIATING EVENT</a></li>
-                <li><a href="#page-3">PAGE 3 — LAYER ONE: THE CAMERAS</a></li>
-                <li><a href="#page-4">PAGE 4 — LAYER TWO: THE GUARDS</a></li>
-                <li><a href="#page-5">PAGE 5 — LAYER THREE: THE VAULT DOOR</a></li>
-                <li><a href="#page-6">PAGE 6 — LAYER FOUR: THE SILENT ALARM</a></li>
-                <li><a href="#page-7">PAGE 7 — THE MULTIPLICATION</a></li>
-                <li><a href="#page-8">PAGE 8 — STRESS-TESTING THE LAYERS</a></li>
-                <li><a href="#page-9">PAGE 9 — THE GO/NO-GO DECISION</a></li>
-                <li><a href="#page-10">PAGE 10 — THE PRINCIPLE</a></li>
-            </ol>
+            <h3>Street Math</h3>
+            <pre style="font-family:'Courier Prime',monospace;font-size:0.85em;line-height:1.6;color:#ccc;white-space:pre;overflow-x:auto;margin:0;">
+  INITIATING EVENT: Breach attempt → freq = 1.0
+
+  INDEPENDENT PROTECTION LAYERS:
+  ┌──────┬──────────────────┬──────────────────┐
+  │ IPL  │ Layer            │ PFD (detection)  │
+  ├──────┼──────────────────┼──────────────────┤
+  │  1   │ Camera system    │ 5 × 10⁻²        │
+  │  2   │ Armed guards     │ 4 × 10⁻²        │
+  │  3   │ Vault door       │ 1.5 × 10⁻¹      │
+  │  4   │ Pressure alarm   │ 1 × 10⁻¹        │
+  └──────┴──────────────────┴──────────────────┘
+
+  LOPA CALCULATION (layers must be INDEPENDENT):
+  P(caught) = PFD₁ × PFD₂ × PFD₃ × PFD₄
+            = 0.05 × 0.04 × 0.15 × 0.10
+            = 3 × 10⁻⁵
+
+  ─────────────────────────────────────────
+  TOLERABLE THRESHOLD: &lt; 1 × 10⁻⁴
+  RESULT: 3 × 10⁻⁵ &lt; 1 × 10⁻⁴ → GO
+  But: common-cause failure breaks independence
+            </pre>
         </div>
 
 

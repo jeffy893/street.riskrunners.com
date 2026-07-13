@@ -426,19 +426,31 @@
         </div>
 
         <div class="toc">
-            <h3>Scenes</h3>
-            <ol>
-                <li><a href="#page-1">PAGE 1 — INT. AUTO REPAIR SHOP — DAY</a></li>
-                <li><a href="#page-2">PAGE 2 — THE PROBLEM WITH SINGLE ESTIMATES</a></li>
-                <li><a href="#page-3">PAGE 3 — THE RANDOM VARIABLES</a></li>
-                <li><a href="#page-4">PAGE 4 — RUNNING THE SIMULATION</a></li>
-                <li><a href="#page-5">PAGE 5 — THE PROBABILITY DISTRIBUTION</a></li>
-                <li><a href="#page-6">PAGE 6 — PERCENTILES AND CONFIDENCE</a></li>
-                <li><a href="#page-7">PAGE 7 — SENSITIVITY: WHAT MATTERS MOST</a></li>
-                <li><a href="#page-8">PAGE 8 — THE COST COMPARISON</a></li>
-                <li><a href="#page-9">PAGE 9 — CONVERGENCE</a></li>
-                <li><a href="#page-10">PAGE 10 — THE VERDICT</a></li>
-            </ol>
+            <h3>Street Math</h3>
+            <pre style="font-family:'Courier Prime',monospace;font-size:0.85em;line-height:1.6;color:#ccc;white-space:pre;overflow-x:auto;margin:0;">
+  RANDOM VARIABLES:
+  ┌─────────────────────────────────────────────┐
+  │ V1: Gasket Life    ~ 2,000–15,000 mi (μ≈6k) │
+  │ V2: Driving Stress ~ 0.8 (gentle) – 1.5 (hard)│
+  │ V3: Temp Cycling   ~ mild to severe          │
+  └─────────────────────────────────────────────┘
+
+  100 ITERATIONS → PROBABILITY DISTRIBUTION:
+  ┌────────────────────────────────────────┐
+  │ Survives 12 mo:  ██░░░░░░░░░░  14%    │
+  │ Fails 6–12 mo:   ████████░░░░  28%    │
+  │ Fails 3–6 mo:    ██████████░░  38%    │
+  │ Fails &lt;3 mo:     ██████░░░░░░  20%    │
+  └────────────────────────────────────────┘
+
+  PERCENTILES:
+    P10 = 2 months  (worst 10%)
+    P50 = 5 months  (median)
+    P90 = 11 months (best 10%)
+
+  SENSITIVITY: Lock driving at gentle →
+    Survival 14% → 31%. Still a losing bet.
+            </pre>
         </div>
 
 

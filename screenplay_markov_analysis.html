@@ -426,19 +426,33 @@
         </div>
 
         <div class="toc">
-            <h3>Scenes</h3>
-            <ol>
-                <li><a href="#page-1">PAGE 1 — INT. SUBWAY CAR — MORNING</a></li>
-                <li><a href="#page-2">PAGE 2 — DEFINING THE STATES</a></li>
-                <li><a href="#page-3">PAGE 3 — THE TRANSITION MATRIX</a></li>
-                <li><a href="#page-4">PAGE 4 — ONE-STEP PREDICTIONS</a></li>
-                <li><a href="#page-5">PAGE 5 — MULTI-STEP PROBABILITIES</a></li>
-                <li><a href="#page-6">PAGE 6 — THE STEADY STATE</a></li>
-                <li><a href="#page-7">PAGE 7 — THE OPTIMAL STRATEGY</a></li>
-                <li><a href="#page-8">PAGE 8 — EXPECTED EARNINGS</a></li>
-                <li><a href="#page-9">PAGE 9 — ABSORPTION AND TIME TO FAILURE</a></li>
-                <li><a href="#page-10">PAGE 10 — THE LESSON</a></li>
-            </ol>
+            <h3>Street Math</h3>
+            <pre style="font-family:'Courier Prime',monospace;font-size:0.85em;line-height:1.6;color:#ccc;white-space:pre;overflow-x:auto;margin:0;">
+  STATES:
+    G (Good)   → $15-25/performance
+    F (Fair)   → $3-8/performance
+    X (Failed) → $0 + risk of citation
+
+  TRANSITION MATRIX (per stop):
+  ┌────────┬────────┬────────┬────────┐
+  │        │  To G  │  To F  │  To X  │
+  ├────────┼────────┼────────┼────────┤
+  │ From G │  0.60  │  0.30  │  0.10  │
+  │ From F │  0.20  │  0.50  │  0.30  │
+  │ From X │  0.05  │  0.35  │  0.60  │
+  └────────┴────────┴────────┴────────┘
+
+  MULTI-STEP (starting from G):
+    After 2 stops: G=42%  F=33%  X=25%
+    After 3 stops: G=33%  F=33%  X=34%
+
+  STEADY STATE: π = [0.18, 0.36, 0.46]
+  System drifts toward degradation.
+
+  ─────────────────────────────────────────
+  STRATEGY: Move cars when P(G→F) triggers.
+  Expected $/hr: stay=weighted avg, move=reset to G
+            </pre>
         </div>
 
 

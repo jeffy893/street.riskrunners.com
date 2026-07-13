@@ -426,19 +426,33 @@
         </div>
 
         <div class="toc">
-            <h3>Scenes</h3>
-            <ol>
-                <li><a href="#page-1">PAGE 1 — EXT. CORNER BODEGA — DAY</a></li>
-                <li><a href="#page-2">PAGE 2 — THE DECISION NODE</a></li>
-                <li><a href="#page-3">PAGE 3 — BRANCH ONE: PAY NOW</a></li>
-                <li><a href="#page-4">PAGE 4 — BRANCH TWO: DODGE</a></li>
-                <li><a href="#page-5">PAGE 5 — CALCULATING EXPECTED VALUE</a></li>
-                <li><a href="#page-6">PAGE 6 — SEQUENTIAL DECISIONS</a></li>
-                <li><a href="#page-7">PAGE 7 — ROLLING BACK THE TREE</a></li>
-                <li><a href="#page-8">PAGE 8 — SENSITIVITY CHECK</a></li>
-                <li><a href="#page-9">PAGE 9 — THE INFORMATION VALUE</a></li>
-                <li><a href="#page-10">PAGE 10 — THE DECISION</a></li>
-            </ol>
+            <h3>Street Math</h3>
+            <pre style="font-family:'Courier Prime',monospace;font-size:0.85em;line-height:1.6;color:#ccc;white-space:pre;overflow-x:auto;margin:0;">
+ [■] DECISION NODE: Pay Manny or Dodge?
+  │
+  ├── Branch 1: PAY NOW ($1,200)
+  │   └── (○) Chance Node
+  │        ├── 85% → Priority next shipment  → +$800
+  │        └── 15% → Manny ghosts            → -$1,200
+  │
+  │   EV(pay) = 0.85(800) + 0.15(-1200)
+  │           = 680 - 180
+  │           = +$500  ✓
+  │
+  └── Branch 2: DODGE
+      └── (○) Chance Node
+           ├── 20% → Manny moves on          → +$1,200
+           ├── 40% → Collector + 50% penalty  → -$1,800
+           └── 40% → Cut off permanently      → -$5,000
+
+      EV(dodge) = 0.20(1200) + 0.40(-1800) + 0.40(-5000)
+                = 240 - 720 - 2000
+                = -$2,480  ✗
+
+ ──────────────────────────────────────
+  VERDICT: Pay now. EV difference = $2,980
+  Value of Perfect Information = $360
+            </pre>
         </div>
 
 

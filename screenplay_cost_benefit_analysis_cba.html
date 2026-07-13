@@ -426,19 +426,31 @@
         </div>
 
         <div class="toc">
-            <h3>Scenes</h3>
-            <ol>
-                <li><a href="#page-1">PAGE 1 — INT. PAWN SHOP BACK OFFICE — NIGHT</a></li>
-                <li><a href="#page-2">PAGE 2 — THE TIME VALUE OF MONEY</a></li>
-                <li><a href="#page-3">PAGE 3 — THE DISCOUNT RATE</a></li>
-                <li><a href="#page-4">PAGE 4 — NET PRESENT VALUE</a></li>
-                <li><a href="#page-5">PAGE 5 — THE NPV CALCULATION</a></li>
-                <li><a href="#page-6">PAGE 6 — THE EFFECTIVE ANNUAL RATE</a></li>
-                <li><a href="#page-7">PAGE 7 — THE COST/BENEFIT FRAMEWORK</a></li>
-                <li><a href="#page-8">PAGE 8 — ALTERNATIVE ANALYSIS</a></li>
-                <li><a href="#page-9">PAGE 9 — THE DECISION MATRIX</a></li>
-                <li><a href="#page-10">PAGE 10 — THE LESSON</a></li>
-            </ol>
+            <h3>Street Math</h3>
+            <pre style="font-family:'Courier Prime',monospace;font-size:0.85em;line-height:1.6;color:#ccc;white-space:pre;overflow-x:auto;margin:0;">
+  THE LOAN: $1,000 today → $50/week interest
+  Payback at week 26: principal + accumulated
+
+  DISCOUNT RATE: 15%/year ≈ 0.29%/week
+
+  NPV (borrower's perspective):
+  ┌─────────────────────────────────────────────┐
+  │ NPV = +$1,000                               │
+  │     - Σ[ $50 / (1.0029)^n ] for n=1..26     │
+  │     - $1,000 / (1.0029)^26                  │
+  │                                             │
+  │ Discounted payments  ≈ $1,270               │
+  │ Discounted principal ≈ $927                 │
+  │ Total present cost   = $2,197               │
+  │                                             │
+  │ NPV = $1,000 - $2,197 = -$1,197  ✗         │
+  └─────────────────────────────────────────────┘
+
+  EFFECTIVE ANNUAL RATE:
+  $50/wk on $1,000 = 5%/week → (1.05)^52 - 1 ≈ 1,164%
+
+  Every dollar borrowed destroys $1.20 in value.
+            </pre>
         </div>
 
 

@@ -426,19 +426,30 @@
         </div>
 
         <div class="toc">
-            <h3>Scenes</h3>
-            <ol>
-                <li><a href="#page-1">PAGE 1 — INT. SPORTS BAR BACK BOOTH — EVENING</a></li>
-                <li><a href="#page-2">PAGE 2 — BEYOND SIMPLE ODDS</a></li>
-                <li><a href="#page-3">PAGE 3 — THE CROSS IMPACT MATRIX</a></li>
-                <li><a href="#page-4">PAGE 4 — CONDITIONAL PROBABILITIES</a></li>
-                <li><a href="#page-5">PAGE 5 — SECOND-ORDER EFFECTS</a></li>
-                <li><a href="#page-6">PAGE 6 — BUILDING THE FULL MATRIX</a></li>
-                <li><a href="#page-7">PAGE 7 — FINDING THE VALUE</a></li>
-                <li><a href="#page-8">PAGE 8 — CORRELATION VS. INDEPENDENCE</a></li>
-                <li><a href="#page-9">PAGE 9 — REAL-TIME UPDATES</a></li>
-                <li><a href="#page-10">PAGE 10 — THE LESSON</a></li>
-            </ol>
+            <h3>Street Math</h3>
+            <pre style="font-family:'Courier Prime',monospace;font-size:0.85em;line-height:1.6;color:#ccc;white-space:pre;overflow-x:auto;margin:0;">
+  CROSS IMPACT MATRIX — If Event A occurs (Reed OUT):
+
+           B(Win)  C(Over)  D(Backup)  E(Reb)  F(PF pts)
+  Base:     0.60    0.55     0.20       0.35     0.50
+  A occurs: 0.40    0.42     0.65       0.55     0.35
+  Shift:   -0.20   -0.13    +0.45      +0.20   -0.15
+
+  SECOND-ORDER EFFECTS:
+  A → D (backup takes more shots)
+       → F (power forward fewer touches, pts drop)
+            → G (PF less engaged → Wolves SF easier lanes)
+
+  ┌─────────────────────────────────────────────┐
+  │ Market prices only 1st-order (moneyline).   │
+  │ Props lag. Backup O/U still at 12.5         │
+  │ → conditional P(over 15) = 0.65             │
+  │ → EDGE: bet the prop, not the spread.       │
+  └─────────────────────────────────────────────┘
+
+  One event. Four probability shifts.
+  The amateurs see the thread. The pros see the web.
+            </pre>
         </div>
 
 
